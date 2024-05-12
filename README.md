@@ -4,12 +4,12 @@ Simple smart contract project using require, assert, revert statements.
 
 ## Description
 
-The SmartContractProject a Solidity smart contract that functions as a manager of single piece of data. It is made using the require, assert, and revert statements which helps in ensuring the integrity and validity of the data.
+The SmartContractProject a Solidity smart contract that functions as a arithmetic calculator It is made using the require, assert, and revert statements. 
 
 ## Usage/Features
 
-1. Allows the management of a single data value of uint256.
-2. Validates data before updating, checking if the new data is not zero, different data value, and is less than current data which ensures its validity and integrity
+1. Can be used in performing simple arithmetic equations, such as multiplication, addition, subtraction, and division.
+2. Perform arithmetic operations within Solidity smart contracts, enforcing constraints on the input and output values to prevent unexpected behavior or vulnerabilities.
 3. It utilizes 3 statements (assert, require, revert) which is used in error handling, by preventing data modifications providing error messages if certain conditions are not met.
 
 ### Executing program
@@ -17,9 +17,9 @@ The SmartContractProject a Solidity smart contract that functions as a manager o
 * Use any solidity compiler, I used remix IDE.
 * Go to solidity compiler, and compile file.
 * On the deploy & run transactions panel, click deploy.
-* On the deployed contracts panel, look for setData, wherein you can modify the data value.
+* On the deployed contracts panel, you can try and add, multiply, divide, and subtract.
 
-Feel free to set new data value and experiment!
+Feel free to perform different arithmetic equations!
 
 ### NOTE
 
