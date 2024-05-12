@@ -1,18 +1,29 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract SmartContractProject {
-    uint256 public data;
-
-    function setData(uint256 _data) public {
-
-        require(_data != 0, "Data cannot be zero");
-
-        assert(_data != data);
-        if (_data < data) {
-            revert("New data must be greater than current data");
-        }
-
-        data = _data;
+contract SimpleMath {
+    function multiply(uint256 a, uint256 b) external pure returns (uint256) {
+        uint256 result = a * b;
+        require(result > 50, "Result of multiplication must be greater than 50");
+        return result;
     }
+
+     function divide(uint256 a, uint256 b) external pure returns (uint256) {
+        require(b != 0, "Cannot divide by zero");
+        uint256 result = a / b;
+        require(result > 10, "Result must be greater than 10");
+        return result;
+    }
+
+    function subtract(uint256 a, uint256 b, uint256 c) external pure returns (uint256) {
+            uint256 result = a - b - c;
+            require(result < 50, "Result must be less than 50");
+            return a - b - c;
+    }
+    
+     function add(uint256 a, uint256 b) external pure returns (uint256) {
+        uint256 result = a + b;
+        assert(result >= a && result >= b); 
+        return result;
+     }
 }
